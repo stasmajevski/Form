@@ -5,35 +5,36 @@
 
 <h2>@ViewBag.Title</h2>
 
-<form method="post">
-
+@using (Html.BeginForm())
+{
     <div class="row">
 
         <div class="col-md-6">
 
             <div class="form-group">
-                <label for="Date" class="control-label">Date</label>
-                <input type="text" id="Date" name="Date" class="form-control" value="@ViewBag.Date"/>
+                @Html.Label("Date",new {@class = "control-label"})
+                @Html.TextBox("Date",null,new { @class = "form-control"})
+              
             </div>
 
             <div class="form-group">
-                <label for="ActivityId" class="control-label">Activity</label>
-                <input type="text" id="ActivityId" name="ActivityId" class="form-control" value="@ViewBag.ActivityId" />
+                @Html.Label("ActivityId", new { @class = "control-label" })
+                @Html.TextBox("ActivityId", null, new { @class = "form-control" })
             </div>
 
             <div class="form-group">
-                <label for="Duration" class="control-label">Duration</label>
-                <input type="text" id="Duration" name="Duration" class="form-control" value="@ViewBag.Duration"/>
+                @Html.Label("Duration", new { @class = "control-label" })
+                @Html.TextBox("Duration", null, new { @class = "form-control" })
             </div>
 
             <div class="form-group">
-                <label for="Intensity" class="control-label">Intensity</label>
-                <input type="text" id="Intensity" name="Intensity" class="form-control"value="@ViewBag.Intensity" />
+                @Html.Label("Intensity", new { @class = "control-label" })
+                @Html.TextBox("Intensity", null, new { @class = "form-control" })
             </div>
 
             <div class="form-group">
-                <label for="Exclude" class="control-label">Exclude</label>
-                <input type="text" id="Exclude" name="Exclude" class="form-control"value="@(ViewBag.Exclude != null ? ViewBag.Exclude.ToString() : "")" />
+                @Html.Label("Exclude", new { @class = "control-label" })
+                @Html.TextBox("Exclude", null, new { @class = "form-control" })
             </div>
 
         </div>
@@ -41,8 +42,8 @@
         <div class="col-md-6">
 
             <div class="form-group">
-                <label for="Notes" class="control-label">Notes</label>
-                <textarea id="Notes" name="Notes" class="form-control" rows="14" cols="20">@ViewBag.Notes</textarea>
+                @Html.Label("Notes", new { @class = "control-label" })
+                @Html.TextArea("Notes", null,14,20, new { @class = "form-control" })
             </div>
 
         </div>
@@ -59,5 +60,5 @@
         </div>
 
     </div>
+}
 
-</form>
