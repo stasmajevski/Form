@@ -47,6 +47,7 @@ namespace Treehouse.FitnessFrog.Controllers
               
             };
             ViewBag.ActivitiesSelectListItems = new SelectList(Data.Data.Activities, "Id", "Name");
+         //   ViewBag.IntensitySelectListItems = new SelectList(Entry.Intensity)
             return View(entry);
         }
         [HttpPost]
