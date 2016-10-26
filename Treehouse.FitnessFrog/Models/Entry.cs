@@ -17,7 +17,7 @@ namespace Treehouse.FitnessFrog.Models
             Medium,
             High
         }
-
+        
         /// <summary>
         /// Default constructor.
         /// </summary>
