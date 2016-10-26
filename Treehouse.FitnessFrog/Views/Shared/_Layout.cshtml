@@ -24,6 +24,8 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="~/favicon.ico" rel="icon" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Secular+One" rel="stylesheet">
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />*@
     <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
@@ -62,5 +64,14 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
+    <script>
+
+        $('input.datepicker').datepicker({
+            format: 'dd-M-yyyy',
+            
+        });
+
+    </script>
 </body>
 </html>
